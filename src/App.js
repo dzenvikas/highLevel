@@ -2,14 +2,12 @@ import React from "react";
 import logo from "./logo.svg";
 import "./App.css";
 
-import Section from "./containers/section/section";
+import Sections from "./containers/sections/sections";
 
 function App() {
   return (
     <div className="App">
-      <Section />
-      <Section />
-      <Section />
+      <Sections />
     </div>
   );
 }

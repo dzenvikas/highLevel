@@ -1,6 +1,7 @@
 import { combineReducers } from "redux";
-import section from "./section";
+import sections from "./sections";
+import sectionOrder from "./sectionOrder";
 
-const combinedReducers = combineReducers({ section });
+const combinedReducers = combineReducers({ sections, sectionOrder });
 
 export default combinedReducers;
