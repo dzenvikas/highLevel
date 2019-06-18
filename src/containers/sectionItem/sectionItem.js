@@ -1,8 +1,10 @@
 import React, { Component } from "react";
 import store from "../../store";
+import "./sectionItem.css";
 import { addSection } from "../../store/actions";
 import generateId from "../../helper/uniqueIdGenerator";
-import "./sectionItem.css";
+
+import RowItem from "../rowItem/rowItem";
 
 class SectionItem extends Component {
   constructor() {
@@ -28,7 +30,7 @@ class SectionItem extends Component {
 
     return (
       <section className={classes} onMouseEnter={this.onHoverHandler} onMouseLeave={this.onHoverHandler} >
-        <h1>{this.props.id}</h1>
+        <h3>{this.props.id}</h3>
         <div className="hl_page-creator--actions">
           <div className="move-actions">
             <span data-tooltip="tooltip" data-placement="right" title="Up">
@@ -65,7 +67,8 @@ class SectionItem extends Component {
         <div href="#" className="new-row-blank">
           <span className="btn btn-light5 btn-slim">Add New Row</span>
         </div>
-      </section >
+        <RowItem />
+      </section>
     );
   }
 };
